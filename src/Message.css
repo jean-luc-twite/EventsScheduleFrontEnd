@@ -1,0 +1,32 @@
+.message-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    border-radius: 25px;
+  }
+  
+  .message-container .buttons-container {
+    display: flex;
+  }
+  
+  .message-container .buttons-container .send-button,
+  .message-container .buttons-container .mic-button {
+    flex: 0 0 auto;
+    padding: 10px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .message-container {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .message-container {
+      width: 90%;
+    }
+  }
+  
