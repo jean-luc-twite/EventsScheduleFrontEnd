@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
-  const [searchShow, setSearchShow] = useState(false);
   const menuActive = () => {
     setActive(!active);
   };

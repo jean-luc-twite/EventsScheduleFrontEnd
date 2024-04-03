@@ -1,5 +1,5 @@
 import React from "react"; 
-import { FaArrowUp, FaMicrophoneAlt } from 'react-icons/fa';
+import { FaMicrophoneAlt } from 'react-icons/fa';
 import { RiSendPlaneFill } from "react-icons/ri";
 // import Logo from '../assets/mainlogo.png';
 

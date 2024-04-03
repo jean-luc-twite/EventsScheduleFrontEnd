@@ -5,14 +5,13 @@ import Message from "../chat/Message";
 
 function Getstarted() {
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-full bg-gray-50">
       {/* Sidebar */}
       <Side />
         
       {/* Main content */}
       <div className="flex-1 flex flex-col relative">
-        <LogoIdentity/> 
-       <Message/>
+         
       </div>
     </div>
   );

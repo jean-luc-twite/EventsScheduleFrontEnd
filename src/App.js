@@ -1,14 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./pages/About"; 
-import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import ScrollToTop from "react-scroll-to-top";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import Getstarted from "./pages/Getstarted";
+import Message from "./chat/Message";
+import Recorder from "./components/Recorder";
+import CreateEvent from "./pages/CreateEvent";
+import EventList from "./pages/EventList";
+import DeleteEvent from "./pages/DeleteEvent";
+import EditEvent from "./pages/EditEvent";
+import SearchEvent from "./pages/SearchEvent";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -21,13 +25,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/about' element={<About />} />  
-        <Route exact path='/contact' element={<Contact />} /> 
-        <Route exact path='/signin' element={<Login/>}/>
-        <Route exact path='/signup' element={<Register/>}/>
-        <Route exact path='/start' element={<Getstarted/>}/> 
-      </Routes> 
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/signin" element={<Login />} />
+        <Route exact path="/signup" element={<Register />} />
+        <Route exact path="/start" element={<Getstarted />} />
+        <Route exact path="/create" element={<CreateEvent />} />
+        <Route exact path="/view" element={<EventList/>} />
+        <Route exact path="/delete" element={<DeleteEvent/>} />
+        <Route exact path="/edit" element={<EditEvent/>} />
+        <Route exact path="/search" element={<SearchEvent/>} />
+      </Routes>
     </BrowserRouter>
   );
 }

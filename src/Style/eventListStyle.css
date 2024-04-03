@@ -1,0 +1,35 @@
+/* eventListStyle.css */
+
+.event-list-container {
+    margin-top: 20px;
+}
+
+h2 {
+    font-weight: bold;
+}
+.event-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.event-details {
+    font-weight: bold;
+}
+
+.event-title {
+    color: #333;
+}
+
+.event-description {
+    color: #666;
+}
+
+.event-date {
+    color: #007bff;
+}
+
+.event-time {
+    color: #28a745;
+}

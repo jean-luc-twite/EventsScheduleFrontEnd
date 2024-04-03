@@ -1,4 +1,4 @@
-import React, { useState } from "react"; 
+import React from "react"; 
 import { Link } from "react-router-dom";
 
 
@@ -36,7 +36,7 @@ const Banner = () => {
                   data-aos-delay='200'
                   data-aos-duration='1500'
                 >
-                  Welcome to <span>Satori</span> 
+                  Welcome to  <span>Event Scheduler</span> 
                 </h2>
                 <p
                   className='content pe-xl-5'
@@ -44,29 +44,17 @@ const Banner = () => {
                   data-aos-delay='250'
                   data-aos-duration='1500'
                 >
-                  Empower Your Business with Satori, FluidIntellect's Cutting-Edge 
-                  Generative AI. Drive Innovation, Enhance
-                   Efficiency, and Achieve Unprecedented Success. 
-                  Explore the Future of AI for Business Today!
+                 Your Premier Destination for Seamless Event Planning!
+                Browse, Book, and Organize Your Events with Ease. Let's Make Every Moment Unforgettable Together!
                 </p>
-                <Link
-                  className='btn btn-border-base '
-                  data-aos='fade-right'
-                  data-aos-delay='300'
-                  data-aos-duration='1500'
-                  to='/signin'
-                >
-                  Login
-                </Link>
-
                 <Link
                   className='btn btn-border-base ml-4'
                   data-aos='fade-right'
                   data-aos-delay='300'
                   data-aos-duration='1500'
-                  to='/signup'
+                  to='/start'
                 >
-                  Register
+                  GET STARTED
                 </Link>
                 
                

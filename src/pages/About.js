@@ -1,6 +1,5 @@
 import React from "react"; 
-import Breadcrumb from "../components/Breadcrumb"; 
-import FooterOne from "../components/FooterOne";  
+import Breadcrumb from "../components/Breadcrumb";  
 import AboutAreaTwo from "../components/AboutAreaTwo";
 
 const About = () => {
@@ -15,9 +14,7 @@ const About = () => {
       <AboutAreaTwo /> 
  
  
-     
-      {/* Footer One */}
-      <FooterOne />
+  
     </>
   );
 };

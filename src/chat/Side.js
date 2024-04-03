@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -6,10 +6,9 @@ import {
   CDBSidebarMenu,
   CDBSidebarMenuItem,
   CDBSidebarFooter,
-} from 'cdbreact';
-import { FaSignOutAlt } from 'react-icons/fa';
-import Swal from 'sweetalert2';
-import { Link } from 'react-router-dom';
+} from "cdbreact";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Side = () => {
   const handleLogout = () => {
@@ -20,38 +19,60 @@ const Side = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Sign out!"
+      confirmButtonText: "Yes, Sign out!",
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
           title: "Sign out!",
           timer: 2000,
           text: "Sign out successfully",
-          icon: "success"
+          icon: "success",
         }).then(() => {
           // Perform the navigation after the alert closes
-          window.location.href = '/signin';
+          window.location.href = "/signin";
         });
       }
     });
   };
 
   return (
-    <CDBSidebar style={{ backgroundColor: '#28353D' }}>
-      <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>Sotari</CDBSidebarHeader>
+    <CDBSidebar style={{ backgroundColor: "#28353D", height: "100vh" }}>
+      <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>
+       Event Scheduler
+      </CDBSidebarHeader>
       <CDBSidebarContent>
         <CDBSidebarMenu>
-          <CDBSidebarMenuItem icon="user">Profile</CDBSidebarMenuItem>
-          <CDBSidebarMenuItem icon="plus">New Chat</CDBSidebarMenuItem>
-          <CDBSidebarMenuItem icon="history" iconType="solid">
-            History
+          <Link to='/view'>
+          <CDBSidebarMenuItem icon="eye" >View Event</CDBSidebarMenuItem>
+          </Link>
+          <Link to='/create'>
+          <CDBSidebarMenuItem icon="plus" >Create events</CDBSidebarMenuItem>
+          </Link>
+           <Link to='/delete'>
+          <CDBSidebarMenuItem icon="trash-alt" iconType="solid">
+            Delete event
           </CDBSidebarMenuItem>
+          </Link>
+          <Link to="/edit">
+          <CDBSidebarMenuItem icon="edit" iconType="solid">
+            Edit event
+          </CDBSidebarMenuItem>
+          </Link>
+          <Link to="/search">
+          <CDBSidebarMenuItem icon="search" iconType="solid">
+            search an event
+          </CDBSidebarMenuItem>
+          </Link>
         </CDBSidebarMenu>
       </CDBSidebarContent>
       <CDBSidebarFooter>
-        
-          <button onClick={handleLogout}> <CDBSidebarMenuItem icon="sign-out-alt"> Log out</CDBSidebarMenuItem> </button>
-      
+        <button onClick={handleLogout}>
+          {" "}
+          <CDBSidebarMenuItem icon="sign-out-alt">
+            {" "}
+            Log out
+          </CDBSidebarMenuItem>{" "}
+        </button>
       </CDBSidebarFooter>
     </CDBSidebar>
   );
