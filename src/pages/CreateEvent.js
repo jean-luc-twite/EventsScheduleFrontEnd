@@ -7,7 +7,7 @@ import '../Style/createEventStyle.css'
 const CreateEvent = () => {
     const [title, SetTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [date,setDate] =useState(new Date());
+    const [date,setDate] =useState('');
     const [events, setEvents] = useState([]);
     const [time, setTime] = useState('');
     
@@ -70,14 +70,12 @@ const CreateEvent = () => {
         <input
           type="date"
           className="input"
-          placeholder="select the date"
-          value={time}
+          value={date}
           onChange={(e) => setDate(e.target.value)}
         />
         <input
           type="time"
           className="input"
-          placeholder="Enter the time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
         />
