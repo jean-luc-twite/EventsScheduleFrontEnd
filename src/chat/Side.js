@@ -29,7 +29,7 @@ const Side = () => {
           icon: "success",
         }).then(() => {
           // Perform the navigation after the alert closes
-          window.location.href = "/signin";
+          window.location.href = "/";
         });
       }
     });
@@ -70,7 +70,7 @@ const Side = () => {
           {" "}
           <CDBSidebarMenuItem icon="sign-out-alt">
             {" "}
-            Log out
+            back to home page
           </CDBSidebarMenuItem>{" "}
         </button>
       </CDBSidebarFooter>
