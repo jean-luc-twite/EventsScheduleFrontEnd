@@ -11,11 +11,12 @@ const DeleteEvent = () => {
     const handleDelete = () => {
         axios.delete(`http://localhost:5000/events/${title}`)
             .then(response => {
-                console.log(response.data);
+                alert(response.data);
+                setTitle('')
                 // Handle success, such as updating the UI
             })
             .catch(error => {
-                console.error('Error:', error.response.data);
+                alert('Error:', error.response.data);
                 // Handle error
             });
     };

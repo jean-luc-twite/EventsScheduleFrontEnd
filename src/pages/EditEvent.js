@@ -16,14 +16,21 @@ const EditEvent = ({ eventTitle }) => {
             new_description: description,
             new_date: date,
             new_time: time
+            
         })
         .then(response => {
-            console.log(response.data);
+            alert(response.data);
             // Handle success, such as updating the UI
+           setOldTitle('')
+           setNewTitle('')
+           setDescription('')
+           setDate('')
+           setTime('')
         })
         .catch(error => {
-            console.error('Error:', error.response.data);
+            alert('Error:', error.response.data);
             // Handle error
+            
         });
     };
 

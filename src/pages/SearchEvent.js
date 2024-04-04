@@ -13,6 +13,7 @@ const SearchEvent = () => {
     axios.get(`http://localhost:5000/events/search?keyword=${keyword}`)
       .then(response => {
         setSearchResult(response.data);
+        setKeyword('')
       })
       .catch(error => {
         console.error('Error:', error);

@@ -31,10 +31,10 @@ const CreateEvent = () => {
         events.forEach(event => {
             axios.post('http://localhost:5000/events/create', event) // Send POST request with Axios
                 .then(response => {
-                    console.log('Event created successfully:', response.data);
+                    alert('Event created successfully:', response.data);
                 })
                 .catch(error => {
-                    console.error('Error:', error.response.data);
+                    alert('Error:', error.response.data);
                     // Handle error
                 });
         });
